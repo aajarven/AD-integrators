@@ -42,3 +42,18 @@ double* unitVector(double *v, int len){
 
     return ret;
 }
+
+
+/*
+ * Returns magnitude of given vector
+ *
+ * v        vector
+ * len      length of the vector
+ */
+double magnitude(double *v, int len){
+    double magnitude = 0;
+    for(int i=0; i<len; i++){
+        magnitude += pow(v[i], 2.0);
+    }
+    return sqrt(magnitude);
+}
