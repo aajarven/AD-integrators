@@ -1,4 +1,6 @@
-#include"arrayUtils.h"
+#include <stdlib.h>
+#include "arrayUtils.h"
+#include "physUtils.h"
 
 /*
  * Integrates 3D system with initial positions and velocites of masses
@@ -30,41 +32,9 @@ void leapfrog(double *masses, double *positions, double *velocities,
     double *vel = dArrCopy(velocites, nBodies*dimensions);
 
 
-    // Calculate gravitational accelerations from other particles
-    double *a = malloc(nBodies*dimensions*sizeof(double));
-    
-    // body feeling the force at index i
-    for(int i=0; i<nBodies; i++){
-        double *r1 = dArrSlice(pos, i*dimensions, dimensions);
+    // Caculate gravitational accelerations from other particles
+    double* a = calculateAccelerations(masses, pos, nBodies, dimensions);
 
-        // set acceleration initially to zero
-        for(int xyz=0; i<dimensions; i++){
-            a[i*dimensions+xyz] = 0;
-        }
-        
-        // every other body causes a force
-        for(int j=0; j<nBodies; j++){
-            if(i != j){
-                // position of body j
-                double *r2 = dArrSlice(pos, j*3, 3);
-                
-                // vector from r2 to r1 and its magnitude
-                double *r = vectorDiff(r2, r1);
-                double rLen = magnitude(rdiff, 3);
-
-                double aMagnitude = masses[j]/pow(rdiffLen, 2.0);
-                
-                // direction from vector from body j to body i
-                double *aDir = unitVector(rdiff, 3);
-                
-                // update acceleration with what we get from particle j
-                for(int xyz=0; i<dimensions; i++){
-                    a[i*dimensions+xyz] = a[i*dimensions+xyz] + aDir[xyz]*aMagnitude;
-                }
-            }
-        }
-    }
-    
     int loopNum = 0;
     //TODO loopstuff
 }
