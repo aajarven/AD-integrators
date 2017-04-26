@@ -51,3 +51,33 @@ double* calculateAccelerations(double *mass, double *position, int nBodies, int 
     
     return a;
 }
+
+/*
+ * Updates all velocities
+ *
+ * vel:     Pointer to double array containing velocities to be updated
+ * a:       Pointer to double array containing accelerations
+ * dt:      Double, length of the time step
+ * N:       Integer, length of the arrays
+ */
+void kick(double *vel, double *a, double dt, int N, int dimensions){
+    for(int i=0; i<N*dimensions; i++){
+        vel[i] = vel[i] + a[i]*dt;
+    }
+}
+
+
+/*
+ * Updates all positions 
+ *
+ * pos:     Pointer to double array containing positions to be updated
+ * vel:     Pointer to double array containing velocities
+ * dt:      Double, length of the time step
+ * N:       Integer, length of the arrays
+ */
+void drift(double *pos, double *vel, double dt, int N, int dimensions){
+    for(int i=0; i<N*dimensions; i++){
+        pos[i] = pos[i] + vel[i]*dt;
+    }
+}
+
