@@ -73,7 +73,7 @@ double* unitVector(double *v, int len){
     origLength = sqrt(origLength);
 
     for (int i=0; i<len; i++){
-        ret[i] = ret[i]/origLength;
+        ret[i] = ret[i]/origLength;
     }
 
     return ret;

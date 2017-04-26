@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "arrayUtils.h"
 #include "physUtils.h"
@@ -31,7 +32,7 @@ void leapfrog(double *masses, double *positions, double *velocities,
     // create a copy of initial positions and velocities to avoid modifying
     // the original arrays
     double *pos = dArrCopy(positions, nBodies*dimensions);
-    double *vel = dArrCopy(velocites, nBodies*dimensions);
+    double *vel = dArrCopy(velocities, nBodies*dimensions);
     double *a;
     double time = 0;
     int loopNum = 0;
@@ -48,7 +49,7 @@ void leapfrog(double *masses, double *positions, double *velocities,
         a = calculateAccelerations(masses, pos, nBodies, dimensions);
         kick(vel, a, dt/2.0, nBodies, dimensions);
 
-        if(loopNum%outFreq = 0){
+        if(loopNum%outFreq == 0){
             dumpSim(output, pos, vel, nBodies, dimensions);
         }
     }

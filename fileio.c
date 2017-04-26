@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*
  * Writes state of the simulation to given file in form
@@ -61,15 +62,17 @@ void dumpSim(FILE *fp, double *pos, double *vel, int nBodies, int dimensions){
  */
 void readInitialConditions(FILE *fp, double *pos, double *vel, double *mass){
     size_t maxLinelength = 256;
-    char *lineBuffer = malloc(maxLinelength*sizeof(char));
+    char *lineBuffer = (char *)malloc(maxLinelength*sizeof(char));
     int index = 0;
 
     while (getline(&lineBuffer, &maxLinelength, fp) != -1){
         // skip empty lines and lines starting with #
         if (strlen(lineBuffer) > 1 && lineBuffer[0] != '#'){
-            sscanf(*lineBuffer, "%e %e %e %e %e %e %e", pos[i], pos[i+1], pos[i+2],
-                    vel[i], vel[i+1], vel[i+2], mass[i]);
-            i++;
+            sscanf(lineBuffer, "%lf %lf %lf %lf %lf %lf %lf",
+                    &pos[index], &pos[index+1], &pos[index+2],
+                    &vel[index], &vel[index+1], &vel[index+2],
+                    &mass[index]);
+            index++;
         }
     }
 }

@@ -1,5 +1,6 @@
 #include <stdlib.h>
-#include "arrayUtlis.h"
+#include <math.h>
+#include "arrayUtils.h"
 
 
 /* 
@@ -19,7 +20,7 @@ double* calculateAccelerations(double *mass, double *position, int nBodies, int 
         
     // body feeling the force at index i
     for(int i=0; i<nBodies; i++){
-        double *r1 = dArrSlice(pos, i*dimensions, dimensions);
+        double *r1 = dArrSlice(position, i*dimensions, dimensions);
 
         // set acceleration initially to zero
         for(int k=0; i<dimensions; i++){
@@ -30,20 +31,20 @@ double* calculateAccelerations(double *mass, double *position, int nBodies, int 
         for(int j=0; j<nBodies; j++){
             if(i != j){ 
                 // position of body j
-                double *r2 = dArrSlice(pos, j*3, 3); 
+                double *r2 = dArrSlice(position, j*3, 3); 
                     
                 // vector from r2 to r1 and its magnitude
-                double *r = vectorDiff(r2, r1);
-                double rLen = magnitude(rdiff, 3); 
+                double *r = vectorDiff(r2, r1, nBodies*dimensions);
+                double rLen = magnitude(r, 3); 
 
-                double aMagnitude = mass[j]/pow(rdiffLen, 2.0);
+                double aMagnitude = mass[j]/pow(rLen, 2.0);
                     
                 // direction from vector from body j to body i
-                double *aDir = unitVector(rdiff, 3); 
+                double *aDir = unitVector(r, 3); 
                     
                 // update acceleration with what we get from particle j
                 for(int k=0; k<dimensions; k++){
-                    a[i*dimensions+k] = a[i*dimensions+k] + aDir[k]*aMagnitude;
+                    a[i*dimensions+k] = a[i*dimensions+k] + aDir[k]*aMagnitude;
                 }   
             }   
         }   
