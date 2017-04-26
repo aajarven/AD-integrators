@@ -13,4 +13,8 @@ void main(){
     double *masses = malloc(6*sizeof(double));
 
     readInitialConditions(in, positions, velocities, masses);
+
+    FILE *out;
+    out = fopen("output/test.dat", "w");
+    dumpSim(out, positions, velocities, 6, 3);
 }

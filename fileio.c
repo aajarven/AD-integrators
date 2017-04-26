@@ -22,7 +22,7 @@ void dumpSim(FILE *fp, double *pos, double *vel, int nBodies, int dimensions){
            
         // position
         for(int j=0; j<dimensions; j++){
-            fprintf(fp, "%10.e", pos[i*dimensions+j]);
+            fprintf(fp, "%.15e", pos[i*dimensions+j]);
             if (j<dimensions-1){
                 fprintf(fp, ",\t");
             } else {
@@ -32,7 +32,7 @@ void dumpSim(FILE *fp, double *pos, double *vel, int nBodies, int dimensions){
         
         // velocity
         for(int j=0; j<dimensions; j++){
-            fprintf(fp, "%10.e", vel[i*dimensions+j]);
+            fprintf(fp, "%.15e", vel[i*dimensions+j]);
             if (j<dimensions-1){
                 fprintf(fp, ",\t");
             } else {
@@ -69,8 +69,8 @@ void readInitialConditions(FILE *fp, double *pos, double *vel, double *mass){
         // skip empty lines and lines starting with #
         if (strlen(lineBuffer) > 1 && lineBuffer[0] != '#'){
             sscanf(lineBuffer, "%lf %lf %lf %lf %lf %lf %lf",
-                    &pos[index], &pos[index+1], &pos[index+2],
-                    &vel[index], &vel[index+1], &vel[index+2],
+                    &pos[index*3], &pos[index*3+1], &pos[index*3+2],
+                    &vel[index*3], &vel[index*3+1], &vel[index*3+2],
                     &mass[index]);
             index++;
         }
