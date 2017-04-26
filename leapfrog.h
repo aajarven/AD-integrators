@@ -1,1 +1,1 @@
-void leapfrog(double*, double*, double*, int, int, double, int, FILE*);
+void leapfrog(double*, double*, double*, int, int, double, double, int, FILE*);
