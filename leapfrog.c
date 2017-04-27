@@ -43,14 +43,12 @@ void leapfrog(double *masses, double *positions, double *velocities,
         time += dt;
         loopNum++;
 
-        free(a);
-        a = calculateAccelerations(masses, pos, nBodies, dimensions);
+        calculateAccelerations(a, masses, pos, nBodies, dimensions);
         kick(vel, a, dt/2.0, nBodies, dimensions);
         
         drift(pos, vel, dt, nBodies, dimensions);
         
-        free(a);
-        a = calculateAccelerations(masses, pos, nBodies, dimensions);
+        calculateAccelerations(a, masses, pos, nBodies, dimensions);
         kick(vel, a, dt/2.0, nBodies, dimensions);
 
         if(loopNum%outFreq == 0){

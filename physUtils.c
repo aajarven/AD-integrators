@@ -6,6 +6,8 @@
 /* 
  * Calculates gravitational accelerations of all particles due to the other particles.
  *
+ * a:           Pointer to double array that will contain accelerations after
+ *              this function is run
  * mass:        Pointer to double array (length nBodies) containing masses for the 
  *              objects. Units m³/s² (gravitational constant included).
  * position:    Pointer to double array containing positions of particles (length
@@ -14,9 +16,7 @@
  * nBodies:     Number of particles.
  * dimensions:  Number of dimensions
  */
-double* calculateAccelerations(double *mass, double *position, int nBodies, int dimensions){
-    // Initialize acceleration array
-    double *a = malloc(nBodies*dimensions*sizeof(double));
+void calculateAccelerations(double *a, double *mass, double *position, int nBodies, int dimensions){
         
     // body feeling the force at index i
     for(int i=0; i<nBodies; i++){
