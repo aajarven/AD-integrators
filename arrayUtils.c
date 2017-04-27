@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "arrayUtils.h"
 
 
@@ -30,7 +31,7 @@ double* dArrCopy(double *in, int size){
  */
 double* dArrSlice(double *in, int start, int len){
     double *ret = malloc(len*sizeof(double));
-    for(int i=0; i++; i<len){
+    for(int i=0; i<len; i++){
         ret[i] = in[start+i];
     }
 
@@ -105,5 +106,22 @@ double magnitude(double *v, int len){
 void dArrMultiply(double *arr, double multiplicand, int len){
     for(int i=0; i<len; i++){
         arr[i] = arr[i]*multiplicand;
+    }
+}
+
+
+/*
+ * Prints the given array
+ *
+ * arr:         Double array to be printed
+ * rows:        Number of rows
+ * cols:        Number of columns
+ */
+void dArrPrint(double *arr, int rows, int cols){
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            printf("%e\t", arr[cols*i+j]);
+        }
+        printf("\n");
     }
 }

@@ -5,3 +5,4 @@ double* unitVector(double*, int);
 double* unitVector(double*, int);
 double magnitude(double*, int);
 void dArrMultiply(double*, double, int);
+void dArrPrint(double*, int, int);
