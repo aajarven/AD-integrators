@@ -33,7 +33,7 @@ void leapfrog(double *masses, double *positions, double *velocities,
     // the original arrays
     double *pos = dArrCopy(positions, nBodies*dimensions);
     double *vel = dArrCopy(velocities, nBodies*dimensions);
-    double *a;
+    double *a = malloc(nBodies*dimensions*sizeof(double));
     double time = 0;
     int loopNum = 0;
 
