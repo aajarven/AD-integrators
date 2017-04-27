@@ -76,4 +76,6 @@ void readInitialConditions(FILE *fp, double *pos, double *vel, double *mass){
             index++;
         }
     }
+
+    free(lineBuffer);
 }

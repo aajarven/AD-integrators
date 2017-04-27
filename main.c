@@ -20,6 +20,10 @@ void main(){
     dArrMultiply(masses, 4*pi*pi, 6);
 
     FILE *out;
-    out = fopen("output/leapfrog-plutoyear.dat", "w");
-    leapfrog(masses, positions, velocities, 6, 3, 0.01, 250, 20, out);
+    out = fopen("output/leapfrog-testi.dat", "w");
+    leapfrog(masses, positions, velocities, 6, 3, 0.01, 2, 1, out);
+
+    free(positions);
+    free(velocities);
+    free(masses);
 }

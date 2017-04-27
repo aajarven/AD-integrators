@@ -85,4 +85,3 @@ void drift(double *pos, double *vel, double dt, int N, int dimensions){
         pos[i] = pos[i] + vel[i]*dt;
     }
 }
-
