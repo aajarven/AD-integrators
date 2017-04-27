@@ -17,7 +17,8 @@ void main(){
     readInitialConditions(in, positions, velocities, masses);
     dArrMultiply(velocities, dayInYr, 6*3);
     dArrMultiply(masses, 1.0/kgInMSun, 6);
-    
+    dArrMultiply(masses, 4*pi*pi, 6);
+
     FILE *out;
     out = fopen("output/leapfrog-plutoyear.dat", "w");
     leapfrog(masses, positions, velocities, 6, 3, 0.01, 250, 20, out);
