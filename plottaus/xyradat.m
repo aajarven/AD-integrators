@@ -1,9 +1,7 @@
 colors = [204 0 153; 255 0 0; 255 204 0; 51 204 204; 0 0 204; 0 0 0]/255;
-colorsRepeated = repmat(colors, length(index)/6);
-colorsRepeated = colorsRepeated(:,1:3);
+colorsRepeated = colors(repmat(1:size(colors,1), length(index)/6,1),:);
 sizes = [40; 2; 2; 2; 2; 2];
-sizesRepeated = repmat(sizes, length(index)/6);
-sizesRepeated = sizesRepeated(:,1);
+sizesRepeated = sizes(repmat(1:size(sizes,1), length(index)/6,1),:);
 
 scatter(x, y, sizesRepeated, colorsRepeated, 'filled')
 
