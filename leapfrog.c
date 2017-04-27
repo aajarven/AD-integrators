@@ -37,6 +37,8 @@ void leapfrog(double *masses, double *positions, double *velocities,
     double time = 0;
     int loopNum = 0;
 
+//    dArrPrint(masses, nBodies, 1);
+
     while (time < endtime){
         time += dt;
         loopNum++;
@@ -50,7 +52,7 @@ void leapfrog(double *masses, double *positions, double *velocities,
         kick(vel, a, dt/2.0, nBodies, dimensions);
 
         if(loopNum%outFreq == 0){
-            dumpSim(output, pos, vel, nBodies, dimensions);
+            dumpSim(output, time, pos, vel, nBodies, dimensions);
         }
     }
 }
