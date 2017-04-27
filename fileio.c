@@ -9,16 +9,17 @@
  * Different dimensions are separated with comma.
  *
  * fp:          Pointer to output file
+ * time:        Double giving current time
  * pos:         Double array containing positions to be written
  * vel:         Double array containing velocities to be written
  * nBodies:     Number of bodies in simulation
  * dimensions:  Number of dimensions
  *
  */
-void dumpSim(FILE *fp, double *pos, double *vel, int nBodies, int dimensions){
+void dumpSim(FILE *fp, double time, double *pos, double *vel, int nBodies, int dimensions){
     for(int i=0; i<nBodies; i++){
         // index of body
-        fprintf(fp, "%i;\t", i);
+        fprintf(fp, "%i;\t%e;\t", i, time);
            
         // position
         for(int j=0; j<dimensions; j++){
