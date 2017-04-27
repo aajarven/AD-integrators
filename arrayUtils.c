@@ -93,3 +93,17 @@ double magnitude(double *v, int len){
     }
     return sqrt(magnitude);
 }
+
+/*
+ * Multiplies every element in given array by given multiplicand.
+ *
+ * arr:             Double array to be edited
+ * multiplicand:    Double with which the elements in the array 
+ *                  will be multiplied with
+ * len:             Length of the array
+ */
+void dArrMultiply(double *arr, double multiplicand, int len){
+    for(int i=0; i<len; i++){
+        arr[i] = arr[i]*multiplicand;
+    }
+}

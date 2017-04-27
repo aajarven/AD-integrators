@@ -9,13 +9,13 @@
  * given using leapfrog integrator.
  *
  * masses:      Pointer to double array containing masses for the objects,
- *              masses given as mG (m^3/s^2)
+ *              masses given as mG (AU^3/yr^2)
  * positions:   Pointer to double array containing initial positions of
  *              particles. Each row contains 3 elements containing
- *              x, y and z components of a particle. Units in meters
+ *              x, y and z components of a particle. Units in AU
  * velocities   Pointer to double array containing initial velocities of
  *              particles. Indexed similarly to positions, Units
- *              km/s.
+ *              AU/yr.
  *  nBodies     Integer, number of particles in simulation
  *  dimensions  Integer, number of dimensions in simulation
  *  dt          Double, length of the time step in seconds
