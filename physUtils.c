@@ -45,9 +45,13 @@ double* calculateAccelerations(double *mass, double *position, int nBodies, int 
                 // update acceleration with what we get from particle j
                 for(int k=0; k<dimensions; k++){
                     a[i*dimensions+k] = a[i*dimensions+k] + aDir[k]*aMagnitude;
-                }   
-            }   
-        }   
+                }
+                free(r2);
+                free(r);
+                free(aDir);
+            } 
+        }
+       free(r1);
     }
     
     return a;
