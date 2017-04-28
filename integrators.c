@@ -28,7 +28,6 @@
 void leapfrog(double *masses, double *positions, double *velocities,
         int nBodies, int dimensions, double dt, double endtime, int outFreq, FILE *output){
 
-
     // create a copy of initial positions and velocities to avoid modifying
     // the original arrays
     double *pos = dArrCopy(positions, nBodies*dimensions);
@@ -50,6 +49,7 @@ void leapfrog(double *masses, double *positions, double *velocities,
         kick(vel, a, dt/2.0, nBodies, dimensions);
 
         if(loopNum%outFreq == 0){
+            originToCOM(pos, masses, nBodies, dimensions);
             dumpSim(output, time, pos, vel, nBodies, dimensions);
         }
     }
@@ -180,6 +180,7 @@ void RK4(double *masses, double *positions, double *velocities,
         free(tmp2);
 
         if(loopNum%outFreq == 0){
+            originToCOM(pos, masses, nBodies, dimensions);
             dumpSim(output, time, pos, vel, nBodies, dimensions);
         }
     }

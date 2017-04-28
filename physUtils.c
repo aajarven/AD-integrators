@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "arrayUtils.h"
+#include "physUtils.h"
 
 
 /* 
@@ -99,4 +100,50 @@ void drift(double *pos, double *vel, double dt, int N, int dimensions){
     for(int i=0; i<N*dimensions; i++){
         pos[i] = pos[i] + vel[i]*dt;
     }
+}
+
+
+/*
+ * Shifts the coordinate axes shuch that the centre of mass for the bodies
+ * lies at the origin of the coordinate system.
+ *
+ * pos:         Pointer to double array containing positions to be updated
+ * mass:        Pointer to double array containing masses for the objects
+ * nBodies:     Number of bodies in the arrays
+ * dimensions:  Number of dimensions
+ */
+void originToCOM(double *pos, double *mass, int nBodies, int dimensions){
+    double *COM = findCOM(pos, mass, nBodies, dimensions);
+    for(int i=0; i<nBodies; i++){
+        for(int j=0; j<dimensions; j++){
+            pos[i*dimensions+j] = pos[i*dimensions+j]-COM[j];
+        }
+    }
+
+    //free(COM);
+}
+
+/*
+ * Returns coordinates of the centre of mass for the system
+ *
+ * pos:         Pointer to double array containing positions of the objects
+ * mass:        Pointer to double array containing masses for the objects
+ * nBodies:     Number of bodies in the arrays
+ * dimensions:  Number of dimensions
+ */
+double* findCOM(double *pos, double *mass, int nBodies, int dimensions){
+    double *COM = dArrSlice(pos, 0, dimensions);
+    dArrMultiply(COM, mass[0], dimensions);
+    double totalMass = mass[0];
+
+    for(int i=1; i<nBodies; i++){
+        for(int j=0; j<dimensions; j++){
+            COM[j] = COM[j] + pos[i*dimensions+j]*mass[i];
+        }
+        totalMass += mass[i];
+    }
+
+    dArrMultiply(COM, 1.0/totalMass, dimensions);
+    return COM;
+
 }
