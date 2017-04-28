@@ -1,0 +1,11 @@
+Runge-Kutta longrun:
+./bin/main input/input_precise.dat 6 3 0.01 1e7 1000000 output/rk4-longrun.dat r
+
+Leapfrog longrun:
+./bin/main input/input_precise.dat 6 3 0.01 1e7 1000000 output/leapfrog-longrun.dat l
+
+Leapfrog shortrun
+./bin/main input/input_precise.dat 6 3 0.01 100000 10000 output/leapfrog-shortrun.dat l
+
+Runge-Kutta shortrun
+./bin/main input/input_precise.dat 6 3 0.01 100000 10000 output/rk-shortrun.dat r
