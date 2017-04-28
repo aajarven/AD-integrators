@@ -66,7 +66,7 @@ void calculateAccelerations(double *a, double *mass, double *position, int nBodi
  * nBodies:     Number of particles.
  * dimensions:  Number of dimensions
  */
-calculateVelocities(double *arr, double *vel, double *a, double dt, int nBodies, int dimensions){
+void calculateVelocities(double *arr, double *vel, double *a, double dt, int nBodies, int dimensions){
     for(int i=0; i<nBodies*dimensions; i++){
         arr[i] = vel[i]+a[i]*dt;
     }

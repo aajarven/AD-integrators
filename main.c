@@ -35,10 +35,13 @@ int main(int argc, char *argv[]){
 
     FILE *out;
     out = fopen(argv[7], "w");
-    if(arv[7]=='l'){
+    if(argv[8][0]=='l'){
         leapfrog(masses, positions, velocities, nBodies, dimensions, step, endTime, outFreq, out);
-    } else if(argv[7] == 'r'){
+    } else if(argv[8][0] == 'r'){
         RK4(masses, positions, velocities, nBodies, dimensions, step, endTime, outFreq, out);
+    } else {
+        printf("invalid integrator (must be either l for leapfrog or r for RK4)\n");
+        exit(-1);
     }
 
     free(positions);
