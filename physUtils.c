@@ -120,7 +120,7 @@ void originToCOM(double *pos, double *mass, int nBodies, int dimensions){
         }
     }
 
-    //free(COM);
+    free(COM);
 }
 
 /*
