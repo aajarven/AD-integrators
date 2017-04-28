@@ -20,8 +20,8 @@ end
 
 scatter(x, y, sizesRepeated, colorsRepeated, 'filled')
 
-xlabel('x');
-ylabel('y');
+xlabel('x (AU)');
+ylabel('y (AU)');
 
 hold on;
 h = zeros(6, 1);
