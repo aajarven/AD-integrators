@@ -50,7 +50,7 @@ double* vectorDiff(double *v1, double *v2, int len){
     double *ret = malloc(len*sizeof(double));
     
     for(int i=0; i<len; i++){
-        ret[i] = v1[i]+v2[i];
+        ret[i] = v1[i]-v2[i];
     }
 
     return ret;
@@ -67,7 +67,7 @@ double* vectorSum(double *v1, double *v2, int len){
     double *ret = malloc(len*sizeof(double));
     
     for(int i=0; i<len; i++){
-        ret[i] = v1[i]-v2[i];
+        ret[i] = v1[i]+v2[i];
     }
 
     return ret;
