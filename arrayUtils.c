@@ -42,11 +42,28 @@ double* dArrSlice(double *in, int start, int len){
 /*
  * Calculates v1-v2 for vectors with given length
  *
+ * v1       first summand
+ * v2       second summand
+ * len      length of vectors
+ */
+double* vectorDiff(double *v1, double *v2, int len){
+    double *ret = malloc(len*sizeof(double));
+    
+    for(int i=0; i<len; i++){
+        ret[i] = v1[i]+v2[i];
+    }
+
+    return ret;
+}
+
+/*
+ * Calculates v1+v2 for vectors with given length
+ *
  * v1       minuend
  * v2       subtrahend
  * len      length of vectors
  */
-double* vectorDiff(double *v1, double *v2, int len){
+double* vectorSum(double *v1, double *v2, int len){
     double *ret = malloc(len*sizeof(double));
     
     for(int i=0; i<len; i++){
@@ -55,7 +72,6 @@ double* vectorDiff(double *v1, double *v2, int len){
 
     return ret;
 }
-
 
 /*
  * Returns a vector with same direction as given vector

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "arrayUtils.h"
 #include "fileio.h"
-#include "leapfrog.h"
+#include "integrators.h"
 #include "consts.h"
 
 
@@ -35,7 +35,11 @@ int main(int argc, char *argv[]){
 
     FILE *out;
     out = fopen(argv[7], "w");
-    leapfrog(masses, positions, velocities, nBodies, dimensions, step, endTime, outFreq, out);
+    if(arv[7]=='l'){
+        leapfrog(masses, positions, velocities, nBodies, dimensions, step, endTime, outFreq, out);
+    } else if(argv[7] == 'r'){
+        RK4(masses, positions, velocities, nBodies, dimensions, step, endTime, outFreq, out);
+    }
 
     free(positions);
     free(velocities);

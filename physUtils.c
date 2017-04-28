@@ -9,7 +9,7 @@
  * a:           Pointer to double array that will contain accelerations after
  *              this function is run
  * mass:        Pointer to double array (length nBodies) containing masses for the 
- *              objects. Units m³/s² (gravitational constant included).
+ *              objects. Units mass³/time² (gravitational constant included).
  * position:    Pointer to double array containing positions of particles (length
  *              dimensions*nBodies). Each row contains x, y and z position of a particles
  *              using meters.
@@ -53,8 +53,23 @@ void calculateAccelerations(double *a, double *mass, double *position, int nBodi
         }
        free(r1);
     }
-    
-    return a;
+}
+
+/* 
+ * Calculates change of position in all particles due to given velocities.
+ *
+ * arr:         Pointer to double array that will contain velocities after
+ *              this function is run
+ * vel:         Pointer to double array containing original velocities 
+ * a:           Pointer to double array containing accelerations of particles
+ * dt:          Length of time step
+ * nBodies:     Number of particles.
+ * dimensions:  Number of dimensions
+ */
+calculateVelocities(double *arr, double *vel, double *a, double dt, int nBodies, int dimensions){
+    for(int i=0; i<nBodies*dimensions; i++){
+        arr[i] = vel[i]+a[i]*dt;
+    }
 }
 
 /*
