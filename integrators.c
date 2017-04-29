@@ -87,10 +87,8 @@ void RK4(double *masses, double *positions, double *velocities,
     double *pos = dArrCopy(positions, nBodies*dimensions);
     double *vel = dArrCopy(velocities, nBodies*dimensions);
    
-    double *tmp; 
     double *tmp1;
     double *tmp2;
-    double *tmpPos;
     double *a = malloc(nBodies*dimensions*sizeof(double));
 
     double time = 0;
@@ -103,52 +101,13 @@ void RK4(double *masses, double *positions, double *velocities,
         calculateAccelerations(a, masses, pos, nBodies, dimensions);
         double *k1a = dArrCopy(a, nBodies*dimensions);
         double *k1v = dArrCopy(vel, nBodies*dimensions);
-
-        // k2a
-        tmp = dArrCopy(k1a, nBodies*dimensions);
-        dArrMultiply(tmp, 0.5*dt, nBodies*dimensions);
-        tmpPos = vectorSum(pos, tmp, nBodies*dimensions);
-        double *k2a = malloc(nBodies*dimensions*sizeof(double));
-        calculateAccelerations(k2a, masses, tmpPos, nBodies, dimensions);
-        free(tmpPos);
-        free(tmp);
+        double *k2a = nextKa(pos, k1v, masses, 0.5*dt, nBodies, dimensions);
+        double *k2v = nextKv(vel, k1a, 0.5*dt, nBodies, dimensions);
+        double *k3a = nextKa(pos, k2v, masses, 0.5*dt, nBodies, dimensions);
+        double *k3v = nextKv(vel, k2a, 0.5*dt, nBodies, dimensions);
+        double *k4a = nextKa(pos, k3v, masses, dt, nBodies, dimensions);
+        double *k4v = nextKv(vel, k3a, dt, nBodies, dimensions);
         
-        // k2v
-        tmp = dArrCopy(k1v, nBodies*dimensions);
-        dArrMultiply(tmp, 0.5*dt, nBodies*dimensions);
-        double *k2v = vectorSum(vel, tmp, nBodies*dimensions);
-        free(tmp);
-
-        // k3a
-        tmp = dArrCopy(k2a, nBodies*dimensions);
-        dArrMultiply(tmp, 0.5*dt, nBodies*dimensions);
-        tmpPos = vectorSum(pos, tmp, nBodies*dimensions);
-        double *k3a = malloc(nBodies*dimensions*sizeof(double));
-        calculateAccelerations(k3a, masses, tmpPos, nBodies, dimensions);
-        free(tmp);
-        free(tmpPos);
-
-        // k3v
-        tmp = dArrCopy(k2v, nBodies*dimensions);
-        dArrMultiply(tmp, 0.5*dt, nBodies*dimensions);
-        double *k3v = vectorSum(vel, tmp, nBodies*dimensions);
-        free(tmp);
-
-        // k4a
-        tmp = dArrCopy(k3a, nBodies*dimensions);
-        dArrMultiply(tmp, dt, nBodies*dimensions);
-        tmpPos = vectorSum(pos, tmp, nBodies*dimensions);
-        double *k4a = malloc(nBodies*dimensions*sizeof(double));
-        calculateAccelerations(k4a, masses, tmpPos, nBodies, dimensions);
-        free(tmp);
-        free(tmpPos);
-
-        // k4v
-        tmp = dArrCopy(k3v, nBodies*dimensions);
-        dArrMultiply(tmp, dt, nBodies*dimensions);
-        double *k4v = vectorSum(vel, tmp, nBodies*dimensions);
-        free(tmp);
-
         // next velocity
         dArrMultiply(k2a, 2.0, nBodies*dimensions);
         dArrMultiply(k3a, 2.0, nBodies*dimensions);

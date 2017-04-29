@@ -147,3 +147,45 @@ double* findCOM(double *pos, double *mass, int nBodies, int dimensions){
     return COM;
 
 }
+
+
+/**
+ * calculates the kna when k(n-1)v is given
+ */
+double* nextKa(double *r, double *prevKv, double *masses, double dt, int nBodies, int dimensions){
+    int arrayLength = nBodies*dimensions;
+    
+    // copy to perform the multiplication on
+    double *prevKvCopy = dArrCopy(prevKv, arrayLength);
+    dArrMultiply(prevKvCopy, dt, arrayLength);
+
+    // updated position based on last ka
+    double *newPos = vectorSum(r, prevKvCopy, arrayLength);
+   
+    
+
+    // next ka from acceleration in next position
+    double *newKa = malloc(arrayLength*sizeof(double));
+    calculateAccelerations(newKa, masses, newPos, nBodies, dimensions);
+
+    free(prevKvCopy);
+    free(newPos);
+
+    return newKa;
+}
+
+
+/**
+ * Calculates the knv when k(n-1)v is given
+ */
+double* nextKv(double *v, double *prevKa, double dt, int nBodies, int dimensions){
+    int arrayLength = nBodies*dimensions;
+    double *prevKaCopy = dArrCopy(prevKa, arrayLength);
+    dArrMultiply(prevKaCopy, dt, arrayLength);
+
+    double *newKv = vectorSum(v, prevKaCopy, arrayLength);
+
+    free(prevKaCopy);
+    
+    return newKv;
+}
