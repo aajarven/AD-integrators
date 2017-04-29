@@ -9,7 +9,7 @@
 int main(int argc, char *argv[]){
 
     if (argc<9){
-        printf("\nYou must give path to initial conditions, number of bodies in simulation, number of dimensions, length of time step (in years), length of simulation (yr), number of integration time steps between consecutive outputs to file and path to the output destination file and simulation type ('l' for leapfrog or 'r' for RK4). For example\n\tinput/input_precise.dat 6 3 0.01 250 10 output/out.dat l\nfor leapfrog simulation with 6 bodies in 3D space using timestep of 0.01 yr, running 250 years and outputting every 0.1 years, where input is read from file input/input_precise.dat and output is written to output/out.dat.\n\nNB! Erroneous arguments or nonexistent input file may cause an unhandled crash.\n\n");
+        printf("\nYou must give path to initial conditions, number of bodies in simulation, number of dimensions, length of time step (in days), length of simulation (days), number of integration time steps between consecutive outputs to file and path to the output destination file and simulation type ('l' for leapfrog or 'r' for RK4). For example\n\tinput/input_precise.dat 6 3 0 1 90000 2 output/out.dat l\nfor leapfrog simulation with 6 bodies in 3D space using timestep of one day, running about 250 years and outputting every 2 days, where input is read from file input/input_precise.dat and output is written to output/out.dat.\n\nNB! Erroneous arguments or nonexistent input file may cause an unhandled crash.\n\n");
         exit(-1);
     }
 
