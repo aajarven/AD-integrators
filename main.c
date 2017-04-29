@@ -29,9 +29,8 @@ int main(int argc, char *argv[]){
     double *masses = malloc(nBodies*sizeof(double));
 
     readInitialConditions(in, positions, velocities, masses);
-    dArrMultiply(velocities, dayInYr, nBodies*dimensions);
     dArrMultiply(masses, 1.0/kgInMSun, nBodies);
-    dArrMultiply(masses, 4*pi*pi, nBodies);
+    dArrMultiply(masses, 4*pi*pi/(dayInYr*dayInYr), nBodies);
 
     FILE *out;
     out = fopen(argv[7], "w");
