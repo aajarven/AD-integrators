@@ -46,7 +46,6 @@
 % prosenttimerkillä alkavat rivit ovat kommentteja: niitä ei katsota dokumenttia käännettäessä eli ne ovat vain kirjoittajaa varten
 
 %%%%%%%%%%%%%%% Oleellinen sisältö alkaa%%%%%%%%%%%%%%%
-\section{Teoria}
 
 
 %\begin{figure}
@@ -60,6 +59,36 @@
 Tarkkoja tuloksia.
 
 
+
+\section{shortrun}
+lf:
+
+mean(mod(fii32, 360))
+
+ans = 179.9886 <- huom ei tasanumero oskillaatioita
+
+max(mod(fii32, 360))
+
+ans = 252.6834
+
+min(mod(fii32, 360))
+
+ans = 107.1817
+
+
+RK4:
+
+mean(mod(fii32, 360))
+
+ans =  177.7899 <- huom ei tasanumero oskillaatioita
+
+max(mod(fii32, 360))
+
+ans = 247.7772
+
+min(mod(fii32, 360))
+
+ans = 109.2403
 
 %%%%% Sisältö loppuu, lähdeluettelo %%%%%
 \bibliographystyle{plain}

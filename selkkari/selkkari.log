@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.29)  30 APR 2017 01:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.29)  30 APR 2017 02:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2342,43 +2342,36 @@ Package babel Info: Redefining finnish shorthand "|
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 58.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 63.
 
 No file selkkari.bbl.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 69.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 69.
+(babel)             in language  on input line 98.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.69 \newpage
+l.98 \newpage
               [1]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 70.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
+(babel)             in language  on input line 99.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 72.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 72.
+(babel)             in language  on input line 101.
  [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
  (./selkkari.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
-
-
-Package rerunfilecheck Warning: File `selkkari.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `selkkari.out':
-(rerunfilecheck)             Before: 83D0D5A196D2721369F2A51465C71AD9;138
-(rerunfilecheck)             After:  A307F416FEAE96045F69AAA7C45AFEFE;144.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package rerunfilecheck Info: File `selkkari.out' has not changed.
+(rerunfilecheck)             Checksum: 948A68317CC41C1F77A2077849DEE6EA;146.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
  17816 strings out of 493013
@@ -2391,7 +2384,7 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on selkkari.pdf (3 pages, 35305 bytes).
+Output written on selkkari.pdf (3 pages, 39499 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
