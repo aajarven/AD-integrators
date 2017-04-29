@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.29)  29 APR 2017 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.29)  30 APR 2017 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2376,28 +2376,25 @@ Package rerunfilecheck Warning: File `selkkari.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `selkkari.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  83D0D5A196D2721369F2A51465C71AD9;138.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Before: 83D0D5A196D2721369F2A51465C71AD9;138
+(rerunfilecheck)             After:  A307F416FEAE96045F69AAA7C45AFEFE;144.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 17812 strings out of 493013
- 344834 string characters out of 6133328
- 385935 words of memory out of 5000000
- 21188 multiletter control sequences out of 15000+600000
+ 17816 strings out of 493013
+ 344870 string characters out of 6133328
+ 385974 words of memory out of 5000000
+ 21192 multiletter control sequences out of 15000+600000
  14618 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,7n,54p,10415b,875s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on selkkari.pdf (3 pages, 35093 bytes).
+Output written on selkkari.pdf (3 pages, 35305 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

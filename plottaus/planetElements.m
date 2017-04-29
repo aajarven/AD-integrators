@@ -52,7 +52,9 @@ function [ inclination, M, omega, Omega, eccentricity, uniqueT, lambda, pomega ]
         if dot(r, v)<0
             nu = 2*pi-nu;
         end
-        %E = 2*atand(sqrt((1-norm(eVec))/(1+norm(eVec)))*tan(nu/2));
+        % this was needed to prevent errors from nu having values of
+        % something + 0.0*i
+        nu = real(nu);
         E = atan2( sqrt(1-dot(eVec, eVec)) * sin(nu), norm(eVec)+cos(nu));
         E = mod(E, 2*pi);
         M = E - norm(eVec)*sin(E); %E - norm(eVec)*sin(E); % 
