@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[finnish]{babel}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{float}
+\usepackage[section]{placeins}
+%\usepackage[numbered,autolinebreaks,useliterate]{mcode} % jos tahdot laittaa matlabkoodia näkyville niin kannattaa käyttää tätä
+
+% hyödyllisiä paketteja:
+\usepackage{siunitx}\sisetup{per=frac} % SI-yksiköitä.
+%\usepackage{supertabular} % jos tarttee isoja taulukoita
+%\usepackage{fullpage} % pienemmät marginaalit jos haluaa
+
+\usepackage{hyperref} % lisääthän omat pakettisi ENNEN hyperref'iä
+\hypersetup{pdfborder={0 0 0}}
+\onehalfspacing
+\cfoot{}
+\rhead{\thepage}
+% asettaa nyk. kappaleen nimen vasempaan ylänurkkaan, saa poistaa jos haluaa
+\lhead{\leftmark}
+
+%%%%% kaikki ennen tätä liittyy käytettäviin paketteihin tai dokumentin muotoiluun. siihen ei tarvinne aluksi koskea. %%%%%
+
+%%%%% kansilehti %%%%%
+\title{Advanced Dynamics \\ The Plutonian Course Project \vspace{0.5em}}
+\author{Anni Järvenpää}
+\date{\today}
+\begin{document}
+\maketitle
+
+% Sisällysluettelo
+%\newpage
+%\thispagestyle{empty}
+%\tableofcontents
+%\newpage
+%\setcounter{page}{1}
+%\parskip=1em \advance\parskip by 0pt plus 2pt
+%\pagestyle{fancy}
+
+% prosenttimerkillä alkavat rivit ovat kommentteja: niitä ei katsota dokumenttia käännettäessä eli ne ovat vain kirjoittajaa varten
+
+%%%%%%%%%%%%%%% Oleellinen sisältö alkaa%%%%%%%%%%%%%%%
+\section{Teoria}
+
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{yllatyskipsu.jpg} %lveydeksi voi antaa myös vaikkapa 5cm tai muun konkreettisen mitan tai vaihtoehtoisesti asettaa leveydeksi vaikapa 80% tekstin leveydestä parametrilla 0.8\textwidth. Kuvan korjeuden voi asettaa esimerkiksi height=6cm.
+%\caption{Kuvatekstissä voisin vaikkapa kertoa, että oikeasti kissa vain haukottelee.}
+%\label{kissakuva}
+%\end{figure}
+
+\section{Tulokset}
+Tarkkoja tuloksia.
+
+
+
+%%%%% Sisältö loppuu, lähdeluettelo %%%%%
+\bibliographystyle{plain}
+\bibliography{selkkarilahteet} %lähdeluettelon tiedot tiedostossa selkkarilahteet.bib. Esimerkiksi helkasta saa kirjojen tiedot valmiiksi bibtex-muodossa, kannattaa hyödyntää.
+
+\appendix
+\newpage
+\section{Liittyvä liite.} \label{koodi}
+Liian laaja leipätekstiin.
+\end{document}
