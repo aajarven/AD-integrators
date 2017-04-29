@@ -30,3 +30,5 @@ for i = 1:6
 end
 legend(h, 'Sun','Jupiter','Saturn', 'Uranus', 'Neptune', 'Pluto');
 hold off;
+
+clearvars h i j
