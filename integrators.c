@@ -179,6 +179,15 @@ void RK4(double *masses, double *positions, double *velocities,
         pos = dArrCopy(tmp2, nBodies*dimensions);
         free(tmp2);
 
+        free(k1v);
+        free(k2v);
+        free(k3v);
+        free(k4v);
+        free(k1a);
+        free(k2a);
+        free(k3a);
+        free(k4a);
+
         if(loopNum%outFreq == 0){
             originToCOM(pos, masses, nBodies, dimensions);
             dumpSim(output, time, pos, vel, nBodies, dimensions);
