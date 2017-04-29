@@ -6,6 +6,9 @@ Leapfrog longrun:
 
 Leapfrog shortrun
 ./bin/main input/input_precise.dat 6 3 0.01 100000 10000 output/leapfrog-shortrun.dat l
+./bin/main input/input_precise.dat 6 3 0.001 100000 100000 output/leapfrog-shortruni-0.001step.dat l
 
 Runge-Kutta shortrun
 ./bin/main input/input_precise.dat 6 3 0.01 100000 10000 output/rk-shortrun.dat r
+./bin/main input/input_precise.dat 6 3 0.001 100000 100000 output/rk-shortrun.dat r <- huom sama tiedosto, tämä uudempi
+./bin/main input/input_precise.dat 6 3 0.0001 100000 1000000 output/rk-shortrun-0.0001.dat r
