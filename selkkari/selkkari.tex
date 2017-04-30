@@ -66,6 +66,8 @@ Kumpikin integraattori vaikuttaa toimivan ja tuottaa järkeviä ratoja. Kuvassa 
 
 Integraattorin outputit sisältävät sarakkeittain kunkin kappaleen indeksin, tallennushetken, koordinaatit ja nopeudet. Kappaleet on indeksoitu nollasta alkaen siten, että järjestys on sama kuin input-tiedostossa. Yksikköinä on ajoille päivä, koordinaateille AU ja nopeuksille AU/d.
 
+Riittävän lyhyttä aika-askelta käytettäessä kummankin integraattorin antamat tulokset vastasivat hyvin toisiaan, kuten seuraavissa luvuissa näytetään. Suorituskyvyltään RK4 on jonkin verran huonompi. Osittain tämä johtuu menetelmän luonteesta, mutta jonkin verran vaikuttaa todennäköisesti oma toteutukseni, jossa esimerkiksi kunkin aika-askeleen aikana luodaan ja vapautetaan useita kookkaita taulukoita k-kertoimien laskennassa tarvittavien väliaikaisten paikkojen ja nopeuksien tallentamiseen.
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{../plots/vuosi-leapfrog-cut.png}

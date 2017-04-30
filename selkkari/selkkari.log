@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.29)  30 APR 2017 05:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.29)  30 APR 2017 05:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2508,52 +2508,52 @@ Overfull \hbox (6.89043pt too wide) in paragraph at lines 57--58
 File: ../plots/vuosi-leapfrog-cut.png Graphic file (type png)
 
 <use ../plots/vuosi-leapfrog-cut.png>
-Package pdftex.def Info: ../plots/vuosi-leapfrog-cut.png used on input line 71.
+Package pdftex.def Info: ../plots/vuosi-leapfrog-cut.png used on input line 73.
 
 (pdftex.def)             Requested size: 452.9679pt x 403.92905pt.
-
-<../plots/vuosi-rk4.png, id=40, 548.80031pt x 468.24937pt>
-File: ../plots/vuosi-rk4.png Graphic file (type png)
-
-<use ../plots/vuosi-rk4.png>
-Package pdftex.def Info: ../plots/vuosi-rk4.png used on input line 78.
-(pdftex.def)             Requested size: 452.9679pt x 386.4891pt.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 76.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.84 \section
-             {Rataelementit} [1]
+l.76 \end{figure}
+                  [1]
+<../plots/vuosi-rk4.png, id=50, 548.80031pt x 468.24937pt>
+File: ../plots/vuosi-rk4.png Graphic file (type png)
+
+<use ../plots/vuosi-rk4.png>
+Package pdftex.def Info: ../plots/vuosi-rk4.png used on input line 80.
+(pdftex.def)             Requested size: 452.9679pt x 386.4891pt.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
  [2 <../plots/vuosi-leapfrog-cut.png (PNG copy)>]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 84.
- [3 <../plots/vuosi-rk4.png (PNG copy)>]
-Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 
-Overfull \hbox (0.63191pt too wide) in paragraph at lines 85--87
+[3 <../plots/vuosi-rk4.png (PNG copy)>]
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 86.
+
+Overfull \hbox (0.63191pt too wide) in paragraph at lines 87--89
 []\OT1/pcr/m/n/12 planetElements(planetNumber, mu, x, y, z, vx, vy, vz, t, inde
 x)[]
  []
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 90.
+(babel)             in language  on input line 92.
 <../plots/lf-longrun-eccentricity.png, id=63, 429.10312pt x 316.18124pt>
 File: ../plots/lf-longrun-eccentricity.png Graphic file (type png)
 
 <use ../plots/lf-longrun-eccentricity.png>
 Package pdftex.def Info: ../plots/lf-longrun-eccentricity.png used on input lin
-e 96.
+e 98.
 (pdftex.def)             Requested size: 362.37569pt x 267.0185pt.
 
 <../plots/rk-longrun-eccentricity.png, id=64, 429.10312pt x 316.18124pt>
@@ -2561,7 +2561,7 @@ File: ../plots/rk-longrun-eccentricity.png Graphic file (type png)
 
 <use ../plots/rk-longrun-eccentricity.png>
 Package pdftex.def Info: ../plots/rk-longrun-eccentricity.png used on input lin
-e 100.
+e 102.
 (pdftex.def)             Requested size: 362.37569pt x 267.0185pt.
 
 
@@ -2572,7 +2572,7 @@ File: ../plots/lf-longrun-inclination.png Graphic file (type png)
 
 <use ../plots/lf-longrun-inclination.png>
 Package pdftex.def Info: ../plots/lf-longrun-inclination.png used on input line
- 108.
+ 110.
 (pdftex.def)             Requested size: 362.37569pt x 271.78513pt.
 
 <../plots/rk-longrun-inclination.png, id=66, 429.10312pt x 316.18124pt>
@@ -2580,16 +2580,16 @@ File: ../plots/rk-longrun-inclination.png Graphic file (type png)
 
 <use ../plots/rk-longrun-inclination.png>
 Package pdftex.def Info: ../plots/rk-longrun-inclination.png used on input line
- 112.
+ 114.
 (pdftex.def)             Requested size: 362.37569pt x 267.0185pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 119.
 
-Overfull \hbox (4.51712pt too wide) in paragraph at lines 118--120
+Overfull \hbox (4.51712pt too wide) in paragraph at lines 120--122
 \OT1/cmr/m/n/12 rok-seen ku-lu-vak-si ajak-si 3 700 000 vuot-ta, jo-ka vas-taa 
 pre-kes-sio-no-peut-ta []. 
  []
@@ -2598,27 +2598,27 @@ pre-kes-sio-no-peut-ta [].
 File: ../plots/lf-longrun-Omega.png Graphic file (type png)
 
 <use ../plots/lf-longrun-Omega.png>
-Package pdftex.def Info: ../plots/lf-longrun-Omega.png used on input line 125.
+Package pdftex.def Info: ../plots/lf-longrun-Omega.png used on input line 127.
 (pdftex.def)             Requested size: 362.37569pt x 271.78513pt.
 
 <../plots/rk-longrun-Omega.png, id=69, 429.10312pt x 316.18124pt>
 File: ../plots/rk-longrun-Omega.png Graphic file (type png)
 
 <use ../plots/rk-longrun-Omega.png>
-Package pdftex.def Info: ../plots/rk-longrun-Omega.png used on input line 129.
+Package pdftex.def Info: ../plots/rk-longrun-Omega.png used on input line 131.
 (pdftex.def)             Requested size: 362.37569pt x 267.0185pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 136.
 <../plots/lf-longrun-omega-cut.png, id=71, 635.37375pt x 327.47343pt>
 File: ../plots/lf-longrun-omega-cut.png Graphic file (type png)
 
 <use ../plots/lf-longrun-omega-cut.png>
 Package pdftex.def Info: ../plots/lf-longrun-omega-cut.png used on input line 1
-42.
+44.
 (pdftex.def)             Requested size: 452.9679pt x 233.46716pt.
 
 <../plots/rk-longrun-omega-cut.png, id=72, 736.25063pt x 327.47343pt>
@@ -2626,30 +2626,30 @@ File: ../plots/rk-longrun-omega-cut.png Graphic file (type png)
 
 <use ../plots/rk-longrun-omega-cut.png>
 Package pdftex.def Info: ../plots/rk-longrun-omega-cut.png used on input line 1
-46.
+48.
 (pdftex.def)             Requested size: 452.9679pt x 201.47742pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 151.
-Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 153.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 153.
+(babel)             in language  on input line 155.
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 155.
 [4]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 154.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 154.
+(babel)             in language  on input line 156.
  [5 <../plots/lf-longrun-eccentricity.png (PNG copy)> <../plots/rk-longrun-ecce
 ntricity.png (PNG copy)>]
 <../plots/lf-shortrun-phi32.png, id=91, 420.06938pt x 326.72063pt>
 File: ../plots/lf-shortrun-phi32.png Graphic file (type png)
 
 <use ../plots/lf-shortrun-phi32.png>
-Package pdftex.def Info: ../plots/lf-shortrun-phi32.png used on input line 158.
+Package pdftex.def Info: ../plots/lf-shortrun-phi32.png used on input line 160.
 
 (pdftex.def)             Requested size: 362.37569pt x 281.84668pt.
 
@@ -2657,46 +2657,46 @@ Package pdftex.def Info: ../plots/lf-shortrun-phi32.png used on input line 158.
 File: ../plots/rk-shortrun-phi32.png Graphic file (type png)
 
 <use ../plots/rk-shortrun-phi32.png>
-Package pdftex.def Info: ../plots/rk-shortrun-phi32.png used on input line 162.
+Package pdftex.def Info: ../plots/rk-shortrun-phi32.png used on input line 164.
 
 (pdftex.def)             Requested size: 362.37569pt x 271.78513pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 167.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 167.
+(babel)             in language  on input line 169.
 [6 <../plots/lf-longrun-inclination.png (PNG copy)> <../plots/rk-longrun-inclin
 ation.png (PNG copy)>]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 167.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 167.
+(babel)             in language  on input line 169.
  [7 <../plots/lf-longrun-Omega.png (PNG copy)> <../plots/rk-longrun-Omega.png (
 PNG copy)>]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 167.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 167.
+(babel)             in language  on input line 169.
  [8 <../plots/lf-longrun-omega-cut.png (PNG copy)> <../plots/rk-longrun-omega-c
 ut.png (PNG copy)>]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 167.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 167.
+(babel)             in language  on input line 169.
  [9 <../plots/lf-shortrun-phi32.png (PNG copy)> <../plots/rk-shortrun-phi32.png
  (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
 
 (./selkkari.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `selkkari.out' has not changed.
 (rerunfilecheck)             Checksum: 9A772A6454A9A98AD60E78D1F81E6FBA;388.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
  21001 strings out of 493013
@@ -2718,7 +2718,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on selkkari.pdf (10 pages, 393435 bytes).
+Output written on selkkari.pdf (10 pages, 393930 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  119 compressed objects within 2 object streams
